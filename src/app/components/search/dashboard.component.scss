@@ -1,0 +1,57 @@
+
+.container{
+  max-width: 95%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search {
+  label {
+      font-size: 1.2rem;
+  }
+
+  select,input {
+      font-size: 18px;
+      height: 41px;
+      outline: none;
+      border: 0;
+      background-color: rgb(219, 219, 219);
+      margin: 0 5px;
+      border-radius: 3px;
+  }
+  select {
+    padding: 0 20px;
+    cursor: pointer;
+  }
+
+  input {
+    padding-left: 10px;
+  }
+}
+
+.btn{
+  background-color: rgb(219, 219, 219);
+  padding: 10px 35px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 0;
+  border-radius: 3px;
+  color: black;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(138, 138, 138);
+}
