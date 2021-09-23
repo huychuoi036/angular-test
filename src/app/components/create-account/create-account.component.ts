@@ -43,7 +43,6 @@ export class CreateAccountComponent implements OnInit {
     const newAccount: Account = { ...this.createNewAccountForm.value };
     this.accountService.addAccount(newAccount).subscribe((data) => {
       console.log(data);
-      alert('Update success');
       this.router.navigate(['']);
     });
   }

@@ -64,7 +64,6 @@ export class EditAccountComponent implements OnInit {
       .editAccount(this.createNewAccount())
       .subscribe((data) => {
         console.log(data);
-        alert('Update success');
         this.router.navigate(['']);
       });
   }

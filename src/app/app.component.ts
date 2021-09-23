@@ -18,20 +18,9 @@ import * as faker from 'faker';
 export class AppComponent implements OnInit {
   name = 'Angular ' + VERSION.major;
   account: Account[] = [];
-  unSubscribeAll: Subject<any>;
-  isOpenAddAccount = false;
-  isOpenEditAccount = false;
   selectedAccount: Account | undefined;
   searchStr = '';
 
-  constructor(private accountService: AccountService) {
-    // read data from file to localstorage
-    this.unSubscribeAll = new Subject<any>();
-  }
-
-  openAddAccount(): void {
-    this.isOpenAddAccount = true;
-  }
 
   ngOnInit(): void {}
 }

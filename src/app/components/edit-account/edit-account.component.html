@@ -47,6 +47,7 @@
             placeholder="Account Number"
             formControlName="account_number"
             name="account_number"
+            min="0"
           />
           <div
             *ngIf="f.account_number.touched && f.account_number.invalid"
@@ -64,6 +65,7 @@
             type="number"
             placeholder="Balance"
             formControlName="balance"
+            min="0"
           />
           <div
             *ngIf="f.balance.touched && f.balance.invalid"
@@ -76,7 +78,7 @@
         <div class="form-group">
           <div class="form-control">
             <label>Age *</label>
-            <input type="number" placeholder="Age" formControlName="age" />
+            <input type="number" placeholder="Age" formControlName="age" min="0" />
             <div *ngIf="f.age.touched && f.age.invalid" class="text-danger">
               <div *ngIf="f.age.errors?.required">Age is required.</div>
             </div>
@@ -84,7 +86,11 @@
 
           <div class="form-control">
             <label>Gender *</label>
-            <input type="text" placeholder="Gender" formControlName="gender" />
+            <!-- <input type="text" placeholder="Gender" formControlName="gender" /> -->
+            <select formControlName="gender">
+              <option >F</option>
+              <option >M</option>
+            </select>
             <div
               *ngIf="f.gender.touched && f.gender.invalid"
               class="text-danger"
